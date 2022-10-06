@@ -1,133 +1,129 @@
-#hat {
-    background: #d9d9d9;
-    display: block;
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: calc(50% - 40px);
-    transform: translateY(-50%);
-    margin: auto;
-    animation: hat-anim .65s step-start infinite;
-    box-shadow:  
-          5px 5px  #FEDA00,
-          -5px 5px #FEDA00, 
-      
-          -15px 10px #FEDA00,
-          -10px 10px  #FFB001, 
-          -5px 10px #FEDA00,
-          0px 10px  #FFB001,
-          5px 10px  #FEDA00,
-          10px 10px  #FFB001,
-          15px 10px  #FEDA00,
-          
-          -20px 15px  #FFB001,
-          -15px 15px  #FEDA00,
-          -10px 15px  #FFB001,
-          -5px 15px  #FEDA00,
-          -0px 15px  #FFB001,
-          5px 15px  #FEDA00,
-          10px 15px  #FFB001,
-          15px 15px  #FEDA00,
-          20px 15px  #FEDA00,
-  
-           -20px 20px  #FFB001,
-          -15px 20px  #FEDA00,
-          -10px 20px  #FFB001,
-          -5px 20px  #FEDA00,
-          -0px 20px  #FFB001,
-          5px 20px  #FEDA00,
-          10px 20px  #FFB001,
-          15px 20px  #FEDA00,
-          20px 20px  #FEDA00,
-          
-          -20px 25px  #FFB001,
-          -15px 25px  #FEDA00,
-          -10px 25px  #FEDA00,
-          -5px 25px  #FEDA00,
-          -0px 25px  #FEDA00,
-          5px 25px  #FEDA00,
-          10px 25px  #FEDA00,
-          15px 25px  #FEDA00,
-          20px 25px  #FEDA00,
-  
-          -25px 30px  #FFB001,
-          -20px 30px  #FFB001,
-          -15px 30px  #FFB001,
-          -10px 30px  #FFB001,
-          -5px 30px  #FFB001,
-          -0px 30px  #FFB001,
-          5px 30px  #FFB001,
-          10px 30px  #FFB001,
-          15px 30px  #FFB001,
-          20px 30px  #FFB001,
-          25px 30px  #FFB001;
-  }
-
-  @keyframes hat-anim {
-  50%  {
-    box-shadow:  
-          5px 5px  #FEDA00,
-          -5px 5px #FEDA00, 
-          
-          -15px 10px #FEDA00,
-          -10px 10px  #FFB001, 
-          -5px 10px #FEDA00,
-          0px 10px  #FFB001,
-          5px 10px  #FEDA00,
-          10px 10px  #FFB001,
-          15px 10px  #FEDA00,
-          
-          -20px 15px  #FFB001,
-          -15px 15px  #FEDA00,
-          -10px 15px  #FFB001,
-          -5px 15px  #FEDA00,
-          -0px 15px  #FFB001,
-          5px 15px  #FEDA00,
-          10px 15px  #FFB001,
-          15px 15px  #FEDA00,
-          20px 15px  #FEDA00,
-          
-          -20px 20px  #FFB001,
-          -15px 20px  #FEDA00,
-          -10px 20px  #FEDA00,
-          -5px 20px  #FEDA00,
-          -0px 20px  #FEDA00,
-          5px 20px  #FEDA00,
-          10px 20px  #FEDA00,
-          15px 20px  #FEDA00,
-          20px 20px  #FEDA00,
-  
-          -25px 25px  #FFB001,
-          -20px 25px  #FFB001,
-          -15px 25px  #FFB001,
-          -10px 25px  #FFB001,
-          -5px 25px  #FFB001,
-          -0px 25px  #FFB001,
-          5px 25px  #FFB001,
-          10px 25px  #FFB001,
-          15px 25px  #FFB001,
-          20px 25px  #FFB001,
-          25px 25px  #FFB001;
-    }
-}
-
-#text{
-  font-family: 'Press Start 2P', cursive;
-  font-size:10px;
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+/* BODY */
+body {
   position: absolute;
-  text-align:center;
+  top: 0;
   left: 0;
   right: 0;
-  top: calc(50% + 5px);
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  background-image: -webkit-linear-gradient(90deg, green 0%, rgb(100, 134, 70) 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: transparent;
+}
+/* CLOUDS */
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 100%;
+  background: transparent;
   display: block;
-  animation: text-anim .65s step-start    infinite;
+  box-shadow: 0 0 150px 100px rgba(255, 255, 255, 0.6),
+    200px 0 200px 150px rgba(255, 255, 255, 0.6),
+    -250px 0 300px 150px rgba(255, 255, 255, 0.6),
+    550px 0 300px 200px rgba(255, 255, 255, 0.6),
+    -550px 0 300px 200px rgba(255, 255, 255, 0.6);
+}
+/* JUMP */
+h1 {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  display: block;
+  text-align: center;
 }
 
- @keyframes text-anim {
-   50%  {
-     text-shadow: 0 0 10px green;
-   }
+h1 span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.8s ease infinite alternate;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
+h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+
+h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+
+h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+}
+
+h1 span:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+}
+
+h1 span:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+}
+
+h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.2s;
+}
+
+h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.3s;
+}
+
+h1 span:nth-child(10) {
+  -webkit-animation-delay: 0.4s;
+}
+
+h1 span:nth-child(11) {
+  -webkit-animation-delay: 0.5s;
+}
+
+h1 span:nth-child(12) {
+  -webkit-animation-delay: 0.6s;
+}
+
+h1 span:nth-child(13) {
+  -webkit-animation-delay: 0.7s;
+}
+
+h1 span:nth-child(14) {
+  -webkit-animation-delay: 0.8s;
+}
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
