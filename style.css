@@ -1,5 +1,3 @@
-/*Inspired by Kevin Powell,
-must use monospace font*/
 
 :root {
   --number-of-characters: 21;
@@ -24,7 +22,7 @@ h1::before, h1::after {
   left: 0;
 }
 h1::before {
-  background: #d9d9d9;
+  background: #ffff;
   opacity: 1;
   -webkit-animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
           animation: typewriter 4s steps(var(--number-of-characters)) 2s forwards;
@@ -65,3 +63,6 @@ p {
   text-decoration-color: rgb(0, 0, 0);
 }
 
+a {
+  text-decoration: none;
+}

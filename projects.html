@@ -8,28 +8,66 @@
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-    <h1>
-        <span>u</span>
-        <span>n</span>
-        <span>d</span>
-        <span>e</span>
-        <span>r</span>
-      </br>
-        <span>c</span>
-        <span>o</span>
-        <span>n</span>
-        <span>s</span>
-        <span>t</span>
-        <span>r</span>
-        <span>u</span>
-        <span>c</span>
-        <span>t</span>
-        <span>i</span>
-        <span>o</span>
-        <span>n</span> </br> </br>
-         check out my github <a href="https://github.com/fantasticella">here</a>
 
-      </h1>
+  <nav>
+    <h1>ella b.</h1>
+    <ul class="navigation">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="aboutme.html" class="nav-link">About Me</a></li>
+      <li><a href="https://github.com/fantasticella" class="nav-link">Github</a></li>
+    </ul>
+    <button class="burger-menu" id="burger-menu">
+      <ion-icon class="bars" name="menu-outline"></ion-icon>
+    </button>
+</nav>
+
+  <section class="projects" id="projects">
+    <h2 class="projects-title">Recent Projects</h2>
+    <div class="projects-container">
+      <div class="project-container project-card">
+        <img
+          src="assets/calculator.png"
+          alt="calculator"
+          loading="lazy"
+          class="project-pic"
+        />
+        <h3 class="project-title">Calculator</h3>
+        <p class="project-details">
+         Simple Calculator using HTML, CSS and JavaScript!
+        </p>
+        <a href="https://fantasticella.github.io/calculator/" target="_blank" class="project-link">Live Preview<br> </a> 
+        <a href="https://github.com/fantasticella/calculator" target="_blank" class="project-link">Code</a>
+      </div>
+      <div class="project-container project-card">
+        <img
+          src="assets/weatherapp.png"
+          alt="weather-app"
+          loading="lazy"
+          class="project-pic"
+        />
+        <h3 class="project-title">Weather App</h3>
+        <p class="project-details">
+          Weather App using React. Type in a valid city, state or country and check out the weather conditions, such as the humidity and wind speed.
+        </p>
+        <a href="https://fantasticella.github.io/weather-app/" target="_blank" class="project-link">Live Preview<br></a>
+        <a href="https://github.com/fantasticella/weather-app" target="_blank" class="project-link">Code</a>
+      </div>
+      <div class="project-container project-card">
+        <img
+          src="assets/spotify.png"
+          alt="spotify-generator"
+          loading="lazy"
+          class="project-pic"
+        />
+        <h3 class="project-title">Spotify Generator</h3>
+        <p class="project-details">
+          Using Spotify API. Select from a list of genres, playlist and songs.
+        </p>
+        <a href="https://fantasticella.github.io/SpotifyWeb_API/" target="_blank" class="project-link">Live Preview<br></a>
+        <a href="https://github.com/fantasticella/SpotifyWeb_API" target="_blank" class="project-link">Code</a>
+      </div>
+    </div>
+  </section>
       
 </body>
 </html>                              
